@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1><h1><?= $data['title']; ?></h1></h1>
+                    <h1><?= $data['title']; ?></h1>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-            <h3 class="card-title"><?= $data['title'];?></h3>
+                <h3 class="card-title"><?= $data['title']; ?></h3>
             </div>
             <div class="card-body">
                 Start creating your amazing application!
