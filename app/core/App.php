@@ -7,12 +7,20 @@ class App
     protected $params = [];
 
     public function __construct()
-    {
+    {   
         $url = $this->parseURL();
-        if (file_exists('../app/controllers/' . $url[0] . '.php')) {
-            $this->controller = $url[0];
-            unset($url[0]);
+        if ($url == null) {
+            if (file_exists('../app/controllers/' . $url . '.php')) {
+                $this->controller = $url[0];
+                unset($url[0]);
+            }
+        }else{
+            if (file_exists('../app/controllers/' . $url[0] . '.php')) {
+                $this->controller = $url[0];
+                unset($url[0]);
+            }
         }
+        
         require_once '../app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller;
         if (isset($url[1])) {
